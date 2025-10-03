@@ -19,6 +19,7 @@ a {
   width: 40px;
   padding: 3px;
   border-radius: 0 30px 30px 0;
+  z-index: 99999;
 }
 .settings i {
   color: #764af1 !important;
@@ -87,6 +88,7 @@ a {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  z-index: 100;
 }
 
 .bg-overlay {
@@ -216,6 +218,7 @@ a {
   padding: 100px 50px;
   background-color: #ffffff;
   gap: 20px;
+  z-index: 100;
 }
 .feature-primary {
   position: relative;
@@ -260,6 +263,7 @@ a {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #f8f9fa;
+  z-index: 1000;
 }
 
 .about-images {
@@ -285,7 +289,7 @@ a {
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
-  color: #764af1;
+  color: #764af1 !important;
   background-color: #764af10d !important;
 }
 .about-content .title {
@@ -307,15 +311,17 @@ a {
 ============================================================================= */
 .cta-section {
   position: relative;
+  background-position: 50% 50%;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-image: url("./assets/images/bg/cta01.jpg");
+  overflow: hidden;
 }
 
 .overlay {
   background-color: rgba(22, 28, 45, 0.4);
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -407,3 +413,229 @@ a {
   transform: scale(1.02);
 }
 
+/* ==========================================================================
+                  Testmonial section styling
+============================================================================= */
+/* Testimonial Section */
+.testimonial {
+  position: relative; /* allows overlay to position absolutely */
+  padding: 100px 0;
+  overflow: hidden;
+  background-image: url("./assets/images/bg/bg-testi.jpg");
+  background-position: 50% 50%;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ensures overlay does not spill out */
+}
+
+.overlay2 {
+  background-color: rgba(22, 28, 45, 0.5);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* sits above background */
+}
+
+/* Testimonial Card Content */
+.testimonial-card {
+  width: 350px;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 2; /* sits above overlay */
+  color: #fff; /* text stays visible over dark overlay */
+  text-align: center;
+}
+
+.testimonial-card > img {
+  margin: 25px 0 35px 0;
+  width: 25px;
+  height: 25px;
+}
+
+.testimonial-image > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* avatar style */
+}
+
+.review .fa-solid {
+  font-size: 10px !important;
+}
+
+/* Background Image */
+
+.box {
+  position: absolute;
+  top: -2.5rem;
+  left: 47%;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+
+/* ==========================================================================
+                 Pricing section styling
+============================================================================= */
+.pricing{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #FFFFFF;
+}
+.pricing .badge {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  color: #764af1 !important;
+  background-color: #764af10d !important;
+}
+.pricing .title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39px;
+}
+.pricing .para-desc {
+  font-size: 16px;
+  line-height: 28px;
+  color: #707070;
+}
+
+
+
+
+/* ==========================================================================
+                 Footer section styling
+============================================================================= */
+footer {
+  background-color: hsl(224, 34%, 13%);
+}
+
+footer > .footer-top {
+  padding: 3.5em 7.25em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 6.7em;
+}
+
+.footer-top > .footer-about {
+  flex: 1;
+}
+
+.footer-about > .footer-about-text {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28px;
+  margin-block: 1.2em;
+}
+
+.footer-top > .footer-about > .footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.footer-socials > a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid hsl(226, 34%, 22%);
+  border-radius: 0.375em;
+  background-color: hsl(226, 34%, 22%, 0.35);
+  transition: 0.4s ease-out;
+}
+
+.footer-socials > a:hover {
+  background-color: hsl(256, 86%, 62%);
+}
+/* 
+.footer-top > .footer-top-item {
+  flex: 1;
+  border: 1px solid white;
+} */
+
+.footer-top-item > h3 {
+  color: rgb(248, 249, 250);
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 1em;
+}
+
+.footer-top > .company-links > ul, .footer-top > .useful-links > ul {
+  list-style-type: none;
+}
+
+.company-links a, .useful-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.7em;
+}
+
+.company-links a > span, .useful-links a > span {
+  color: rgb(173, 181, 189);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 23px;
+  transition: 0.5s;
+}
+
+.company-links a:hover > span, .useful-links a:hover > span {
+  color: hsl(256, 86%, 62%);
+}
+
+.company-links a > img, .useful-links a > img {
+  transition: 0.5s;
+}
+
+.company-links a:hover > img, .useful-links a:hover > img {
+  translate: 3px 0;
+}
+
+.footer-top > .bizcell-store > address > .address-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.address-item:nth-child(4) > img, .address-item:nth-child(5) > img {
+  margin-top: 0.25em;
+}
+
+
+.address-item > p {
+  color: rgb(173, 181, 189);
+  font-style: normal;
+}
+
+footer > .footer-bottom {
+  border-top: 1px solid hsl(226, 34%, 22%);
+  padding: 30px 7.25em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom > p {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.footer-bottom > p > span {
+  color: hsl(210, 11%, 71%);
+}
+
+.footer-bottom > .visa-cards {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
