@@ -480,28 +480,182 @@ a {
 /* ==========================================================================
                  Pricing section styling
 ============================================================================= */
-.pricing{
+.team{
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #FFFFFF;
 }
-.pricing .badge {
+.team .badge {
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
   color: #764af1 !important;
   background-color: #764af10d !important;
 }
-.pricing .title {
+.team .title {
   font-size: 28px;
   font-weight: 500;
   line-height: 39px;
 }
-.pricing .para-desc {
+.team .para-desc {
   font-size: 16px;
   line-height: 28px;
   color: #707070;
 }
+.team-member .member-name a:hover {
+    color: #764af1 !important
+}
+
+.team-member .team-overlay {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s ease;
+    transform: translateY(512px);
+    background: linear-gradient(to bottom, rgba(22,28,45,0.1) 10%, rgba(22,28,45,0.4) 50%, rgba(22,28,45,0.8) 75%, #161c2d 100%) !important
+}
+.team-member .team-overlay .team-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(50%)
+}
+.team-member .team-overlay .team-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    opacity: 0
+}
+
+@media (min-width: 1024px) and (max-width: 1140px) {
+    .team-member .team-overlay .team-icon {
+        top:-1% !important
+    }
+}
+
+.team-member.teams {
+    transition: all 0.5s ease
+}
+
+.team-member:hover {
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(22,28,45,0.15)
+}
+
+.team-member:hover .team-overlay {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.team-member:hover .team-info {
+    position: absolute;
+    opacity: 1;
+    transform: translateY(50%)
+}
+
+.team-member:hover .team-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    opacity: 1
+}
+
+.team-member:hover.teams {
+    box-shadow: none !important
+}
+
+.social-icons li a {
+    color: #fff;
+    border: 1px solid rgba(118,74,241,0.4);
+    background-color: rgba(118,74,241,0.7);
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    font-size: 15px;
+    width: 32px;
+    line-height: 30px;
+    transition: all 0.4s ease;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative
+}
+
+.social-icons li a:hover {
+    background-color: #764af1;
+    border-color: #764af1;
+    color: #fff !important
+}
+
+.social-icons.social li a {
+    color: #adb5bd;
+    border-color: #adb5bd
+}
+
+.team-social li a {
+    color: #fff;
+    display: inline-block;
+    height: 36px;
+    text-align: center;
+    font-size: 22px;
+    width: 36px;
+    font-weight: 500 !important;
+    line-height: 30px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative
+}
+
+.team-social li a:hover {
+    color: #161c2d !important
+}
+
+.team img,.team .team-social {
+    transition: all 0.5s ease
+}
+
+.team-primary .member-name a {
+    transition: all 0.5s ease
+}
+
+.team-primary .member-name a:hover {
+    color: #764af1 !important
+}
+
+.team-primary .card-img .card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(to bottom, rgba(22,28,45,0.1) 10%, rgba(22,28,45,0.4) 50%, rgba(22,28,45,0.8) 75%, #161c2d 100%) !important;
+    transition: all 0.5s ease
+}
+
+.team-primary .social-icons {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -50px;
+    opacity: 0;
+    transition: all 0.5s ease
+}
+
+.team-primary:hover .card-img .card-overlay {
+    opacity: 1
+}
+
+.team-primary:hover .social-icons {
+    bottom: 15px;
+    opacity: 1
+}
+
 
 
 
