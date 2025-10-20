@@ -1,0 +1,795 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.settings {
+  /* background: none repeat scroll 0 0 transparent; */
+  height: 41px;
+  position: fixed;
+  /* right: -41px; */
+  top: 150px;
+  width: 40px;
+  padding: 3px;
+  border-radius: 0 30px 30px 0;
+  z-index: 99999;
+}
+.settings i {
+  color: #764af1 !important;
+  font-size: 22px;
+  margin: 8px 1px 8px 4px;
+  animation: rotate 1.8s linear infinite; /* smooth infinite rotation */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+                      Navbar section styling
+============================================================================= */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 15px 7.5rem;
+  background-color: white;
+  border: 0;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 3px rgba(22, 28, 45, 0.15);
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.navbar ul li a {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 24px;
+  color: black;
+}
+.navbar ul li .navlink:hover {
+  color: #764af1;
+}
+.navbar ul li i {
+  font-size: 18px;
+  margin-left: -20px;
+}
+
+/* ==========================================================================
+                      Hero section styling
+============================================================================= */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.bg-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(22, 28, 45, 0.7);
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 28, 45, 0.4) 10%,
+    rgba(22, 28, 45, 0.5) 50%,
+    rgba(22, 28, 45, 0.9) 75%,
+    #161c2d 100%
+  ) !important;
+}
+.hero-content {
+  margin-top: 60px;
+  text-align: center;
+}
+.hero-title {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 59px;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+.hero-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 35px;
+}
+.svg {
+  position: absolute;
+  bottom: -10px;
+  transform: scale(2);
+  width: 100%;
+}
+
+.hero-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: White;
+  background-color: #764af1;
+  transition: all 0.3s ease;
+}
+.hero-btn:hover {
+  color: #ffffff;
+  background-color: #521bed;
+}
+/* Common styles for slides */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  animation: slideAnim 15s infinite; /* 5s per image */
+}
+
+.slide1 {
+  background-image: url("./assets/images/bg/bg01.jpg");
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url("./assets/images/bg/bg02.jpg");
+  animation-delay: 5s;
+}
+
+.slide3 {
+  background-image: url("./assets/images/bg/bg03.jpg");
+  animation-delay: 10s;
+}
+
+/* Keyframes: fade in + scale up, then scale down + fade out */
+@keyframes slideAnim {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+                      Feature section styling
+============================================================================= */
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+  background-color: #ffffff;
+  gap: 20px;
+  z-index: 100;
+}
+.feature-primary {
+  position: relative;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(22, 28, 45, 0.15) !important;
+}
+
+.feature-content .feature-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  transition: all 0.3s ease;
+}
+.feature-content .feature-title:hover {
+  color: #764af1;
+}
+
+.feature-content .feature-text {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #707070;
+}
+.feature-image > img {
+  height: 65px;
+  padding: 1rem;
+  margin: 1rem;
+
+  border-radius: 50%;
+  border: 2px dotted rgba(118, 74, 241, 0.5) !important;
+}
+
+/* ==========================================================================
+                      About section styling
+============================================================================= */
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f8f9fa;
+  z-index: 1000;
+}
+
+.about-images {
+  position: relative;
+}
+.about-images .about-img1 {
+  border-radius: 10px;
+}
+.about-images .about-img2 {
+  position: absolute;
+  right: 12px;
+  bottom: -22px;
+  border-radius: 10px;
+}
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.about-content span {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  color: #764af1 !important;
+  background-color: #764af10d !important;
+}
+.about-content .title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39px;
+  color: #4d4d4d;
+  margin-bottom: 35px;
+}
+.about-content .text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #707070;
+}
+
+/* ==========================================================================
+                  Cta section styling
+============================================================================= */
+.cta-section {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-image: url("./assets/images/bg/cta01.jpg");
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(22, 28, 45, 0.4);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 39px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.cta-content .cta-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cta-content .btn-light {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 7px 18px;
+  color: rgb(22, 28, 45);
+  box-shadow: rgba(118, 74, 241, 0.3) 0px 3px 5px 0px;
+  background: rgb(248, 249, 250);
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 7px;
+  outline: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-content .btn-light:hover {
+  background-color: #dae0e5;
+}
+
+/* ==========================================================================
+                  Services section styling
+============================================================================= */
+.services {
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.services .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services .badge {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  color: #764af1 !important;
+  background-color: #764af10d !important;
+}
+.services .title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39px;
+}
+.services .para-desc {
+  font-size: 16px;
+  line-height: 28px;
+  color: #707070;
+}
+
+.services-card {
+  border: 2px dashed rgba(204, 200, 200, 0.2);
+  transition: all 0.5s ease;
+}
+.services-card:hover {
+  border: 2px dashed rgba(118, 74, 241, 0.2);
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+                  Testmonial section styling
+============================================================================= */
+/* Testimonial Section */
+.testimonial {
+  position: relative; /* allows overlay to position absolutely */
+  padding: 100px 0;
+  overflow: hidden;
+  background-image: url("./assets/images/bg/bg-testi.jpg");
+  background-position: 50% 50%;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ensures overlay does not spill out */
+}
+
+.overlay2 {
+  background-color: rgba(22, 28, 45, 0.5);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* sits above background */
+}
+
+/* Testimonial Card Content */
+.testimonial-card {
+  width: 350px;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 2; /* sits above overlay */
+  color: #fff; /* text stays visible over dark overlay */
+  text-align: center;
+}
+
+.testimonial-card > img {
+  margin: 25px 0 35px 0;
+  width: 25px;
+  height: 25px;
+}
+
+.testimonial-image > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* avatar style */
+}
+
+.review .fa-solid {
+  font-size: 10px !important;
+}
+
+/* Background Image */
+
+.box {
+  position: absolute;
+  top: -2.5rem;
+  left: 47%;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+
+/* ==========================================================================
+                 Pricing section styling
+============================================================================= */
+.team{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #FFFFFF;
+}
+.team .badge {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  color: #764af1 !important;
+  background-color: #764af10d !important;
+}
+.team .title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39px;
+}
+.team .para-desc {
+  font-size: 16px;
+  line-height: 28px;
+  color: #707070;
+}
+.team-member .member-name a:hover {
+    color: #764af1 !important
+}
+
+.team-member .team-overlay {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s ease;
+    transform: translateY(512px);
+    background: linear-gradient(to bottom, rgba(22,28,45,0.1) 10%, rgba(22,28,45,0.4) 50%, rgba(22,28,45,0.8) 75%, #161c2d 100%) !important
+}
+.team-member .team-overlay .team-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(50%)
+}
+.team-member .team-overlay .team-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    opacity: 0
+}
+
+@media (min-width: 1024px) and (max-width: 1140px) {
+    .team-member .team-overlay .team-icon {
+        top:-1% !important
+    }
+}
+
+.team-member.teams {
+    transition: all 0.5s ease
+}
+
+.team-member:hover {
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(22,28,45,0.15)
+}
+
+.team-member:hover .team-overlay {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.team-member:hover .team-info {
+    position: absolute;
+    opacity: 1;
+    transform: translateY(50%)
+}
+
+.team-member:hover .team-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    opacity: 1
+}
+
+.team-member:hover.teams {
+    box-shadow: none !important
+}
+
+.social-icons li a {
+    color: #fff;
+    border: 1px solid rgba(118,74,241,0.4);
+    background-color: rgba(118,74,241,0.7);
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    font-size: 15px;
+    width: 32px;
+    line-height: 30px;
+    transition: all 0.4s ease;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative
+}
+
+.social-icons li a:hover {
+    background-color: #764af1;
+    border-color: #764af1;
+    color: #fff !important
+}
+
+.social-icons.social li a {
+    color: #adb5bd;
+    border-color: #adb5bd
+}
+
+.team-social li a {
+    color: #fff;
+    display: inline-block;
+    height: 36px;
+    text-align: center;
+    font-size: 22px;
+    width: 36px;
+    font-weight: 500 !important;
+    line-height: 30px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative
+}
+
+.team-social li a:hover {
+    color: #161c2d !important
+}
+
+.team img,.team .team-social {
+    transition: all 0.5s ease
+}
+
+.team-primary .member-name a {
+    transition: all 0.5s ease
+}
+
+.team-primary .member-name a:hover {
+    color: #764af1 !important
+}
+
+.team-primary .card-img .card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(to bottom, rgba(22,28,45,0.1) 10%, rgba(22,28,45,0.4) 50%, rgba(22,28,45,0.8) 75%, #161c2d 100%) !important;
+    transition: all 0.5s ease
+}
+
+.team-primary .social-icons {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -50px;
+    opacity: 0;
+    transition: all 0.5s ease
+}
+
+.team-primary:hover .card-img .card-overlay {
+    opacity: 1
+}
+
+.team-primary:hover .social-icons {
+    bottom: 15px;
+    opacity: 1
+}
+
+
+
+
+
+/* ==========================================================================
+                 Footer section styling
+============================================================================= */
+footer {
+  background-color: hsl(224, 34%, 13%);
+}
+
+footer > .footer-top {
+  padding: 3.5em 7.25em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 6.7em;
+}
+
+.footer-top > .footer-about {
+  flex: 1;
+}
+
+.footer-about > .footer-about-text {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28px;
+  margin-block: 1.2em;
+}
+
+.footer-top > .footer-about > .footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.footer-socials > a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid hsl(226, 34%, 22%);
+  border-radius: 0.375em;
+  background-color: hsl(226, 34%, 22%, 0.35);
+  transition: 0.4s ease-out;
+}
+
+.footer-socials > a:hover {
+  background-color: hsl(256, 86%, 62%);
+}
+/* 
+.footer-top > .footer-top-item {
+  flex: 1;
+  border: 1px solid white;
+} */
+
+.footer-top-item > h3 {
+  color: rgb(248, 249, 250);
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 1em;
+}
+
+.footer-top > .company-links > ul, .footer-top > .useful-links > ul {
+  list-style-type: none;
+}
+
+.company-links a, .useful-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.7em;
+}
+
+.company-links a > span, .useful-links a > span {
+  color: rgb(173, 181, 189);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 23px;
+  transition: 0.5s;
+}
+
+.company-links a:hover > span, .useful-links a:hover > span {
+  color: hsl(256, 86%, 62%);
+}
+
+.company-links a > img, .useful-links a > img {
+  transition: 0.5s;
+}
+
+.company-links a:hover > img, .useful-links a:hover > img {
+  translate: 3px 0;
+}
+
+.footer-top > .bizcell-store > address > .address-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.address-item:nth-child(4) > img, .address-item:nth-child(5) > img {
+  margin-top: 0.25em;
+}
+
+
+.address-item > p {
+  color: rgb(173, 181, 189);
+  font-style: normal;
+}
+
+footer > .footer-bottom {
+  border-top: 1px solid hsl(226, 34%, 22%);
+  padding: 30px 7.25em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom > p {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.footer-bottom > p > span {
+  color: hsl(210, 11%, 71%);
+}
+
+.footer-bottom > .visa-cards {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}

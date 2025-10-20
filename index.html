@@ -1,930 +1,1125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bizcell</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="shortcut icon"
-      href="./assets/images/favicon.ico"
+      href="./Assets/Navbar/favicon.ico"
       type="image/x-icon"
     />
-    <title>Bizcell</title>
-    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- ==========================================================================
-                      Navbar section start
-    ============================================================================= -->
-    <header class="navbar">
-      <div class="logo">
-        <img src="./assets/images/logo-dark.png" alt="" />
-      </div>
-      <ul class="nav">
-        <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">ABOUT US</a></li>
-        <li class="nav-item"><a href="#page" class="nav-link">PAGES</a></li>
-        <li class="nav-item">
-          <a href="#portfolio" class="nav-link">PORTFOLIO</a>
-        </li>
-        <li class="nav-item"><a href="#blog" class="nav-link">BLOGS</a></li>
-        <li class="nav-item">
-          <a href="#contact" class="nav-link">CONTACT</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></a>
-        </li>
-      </ul>
+    <header class="header">
+      <nav class="navbar">
+        <div id="logo">
+          <img src="./Assets/Navbar/logo-dark.png" alt="" />
+        </div>
+        <div>
+          <img class="menu-icon" src="./Assets/Navbar/menu.svg" alt="" />
+        </div>
+        <div class="links">
+          <ul class="active">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contant</a></li>
+            <li><input type="search" placeholder="Search" /></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <!-- ==========================================================================
-                      Hero section start
-    ============================================================================= -->
-    <section class="hero">
-      <div class="slide slide1"></div>
-      <div class="slide slide2"></div>
-      <div class="slide slide3"></div>
-      <div class="bg-overlay">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            We Are Helping To Grow <br />
-            Your Business !
-          </h1>
-          <p class="hero-text">
-            Are you looking for professional advice & proper service for <br />
-            your project ? Digital, business & technology consulting for
-            <br />business resilience.
-          </p>
-          <a href="" class="hero-btn btn">CONTACT US</a>
-        </div>
-      </div>
-      <div class="svg">
-        <img
-          src="./assets/images/dd8f41b1-672f-427e-99fa-506955cfa5fd.svg"
-          alt=""
-        />
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-                      Features section start
-    ============================================================================= -->
-    <section class="feature">
-      <div class="feature-primary">
-        <div class="feature-image">
-          <img src="./assets/images/svg/globe.svg" alt="" />
-        </div>
-        <div class="feature-content">
-          <h5 class="feature-title">Globally Partners</h5>
-          <p class="feature-text">
-            It is a long established fact that a reader will be distracted by
-            the content of at its readable.
-          </p>
-        </div>
-      </div>
-      <div class="feature-primary">
-        <div class="feature-image">
-          <img src="./assets/images/svg/shield.svg" alt="" />
-        </div>
-        <div class="feature-content">
-          <h5 class="feature-title">Globally Partners</h5>
-          <p class="feature-text">
-            It is a long established fact that a reader will be distracted by
-            the content of at its readable.
-          </p>
-        </div>
-      </div>
-      <div class="feature-primary">
-        <div class="feature-image">
-          <img src="./assets/images/svg/wallet.svg" alt="" />
-        </div>
-        <div class="feature-content">
-          <h5 class="feature-title">Globally Partners</h5>
-          <p class="feature-text">
-            It is a long established fact that a reader will be distracted by
-            the content of at its readable.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-                      About section start
-    ============================================================================= -->
-    <section class="container-fluid about" id="#about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 about-images">
-            <img src="./assets/images/about/1.jpg" alt="" class="about-img1" />
-            <img src="./assets/images/about/2.jpg" alt="" class="about-img2" />
-            <!-- <img src="./assets/images/play.png" alt="" class="about-icon"> -->
+    <main>
+      <section id="home-section">
+        <div class="slideshow">
+          <div class="slide slide1"></div>
+          <div class="slide slide2"></div>
+          <div class="slide slide3"></div>
+          <div class="home-content">
+            <h1>We Are Helping To Grow Your Business !</h1>
+            <p>
+              Are you looking for professional advice & proper service for your
+              project ? Digital, business & technology consulting for business
+              resilience.
+            </p>
+            <button class="home-btn">Contact us</button>
           </div>
-          <div class="col-lg-6 about-content">
-            <div>
-              <span
-                class="badge bg-soft-primary text-uppercase text-primary py-2 px-3 rounded-pill mb-2"
-                >get to know us</span
-              >
-              <h3 class="title">About Us</h3>
-              <p class="text">
-                We are so excited and proud of our business. It's really easy to
-                create a landing page for your awesome business.
+          <p class="setting-icon">
+            <img src="./Assets/Home-section/setting.svg" alt="" />
+          </p>
+          <img
+            class="bottom-image"
+            src="./Assets/Home-section/bottom.svg"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- yaha per home section ki structuring shuru hoty he  -->
+
+      <!-- yaha se trusted section ki structuring shuru ho rahi he  -->
+      <section class="trusted-section">
+        <p class="arrow">
+          <img src="./Assets/arrow.svg" alt="" />
+        </p>
+        <div class="partners">
+          <div class="partners-div">
+            <div class="icon-div"><img src="./Assets/globe.svg" alt="" /></div>
+            <div class="icon-content">
+              <p class="icon-name">Globally Partners</p>
+              <p class="icon-pera">
+                It is a long established fact that a reader will be distracted
+                by the content of at its readable.
               </p>
-              <p class="text">
-                Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum
-                est quis arcu posuere condimentum. Nullam justo eros,
-                pellentesque a metus non, mattis volutpat libero. Praesent
-                ornare felis ante, sit amet porta felis pellentesque fermentum.
-              </p>
-              <a href="" class="hero-btn btn">READ MORE</a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-                      Cta section start
-    ============================================================================= -->
-    <section class="cta-section">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row cta">
-          <div class="col-lg-10">
-            <div class="cta-content">
-              <h4 class="cta-title">Let's get Started</h4>
-              <p class="cta-text">
-                Paying attention to what our customers want and what they say is
-                the most important value <br />in Stylemix.
+          <div class="partners-div">
+            <div class="icon-div"><img src="./Assets/shield.svg" alt="" /></div>
+            <div class="icon-content">
+              <p class="icon-name">Trusted Partners</p>
+              <p class="icon-pera">
+                It is a long established fact that a reader will be distracted
+                by the content of at its readable.
               </p>
-              <div class="mt-3 pt-2">
-                <a href="#" class="btn btn-light">Buy Now</a>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div id="jarallax-container-0" class="cta-bg">
-        <div id="cta-bg-image"></div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-                     Why Choose us section start
-    ============================================================================= -->
-    <section class="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <span
-                class="badge text-uppercase text-primary py-2 px-3 rounded-pill mb-2"
-                >why us</span
-              >
-              <h3 class="title mb-4">Why Choose Us ?</h3>
-              <p class="para-desc">
-                We are so excited and proud of our business. It's really easy to
-                create a landing page for <br />your awesome business.
+          <div class="partners-div">
+            <div class="icon-div"><img src="./Assets/wallet.svg" alt="" /></div>
+            <div class="icon-content">
+              <p class="icon-name">Financial Analysis</p>
+              <p class="icon-pera">
+                It is a long established fact that a reader will be distracted
+                by the content of at its readable.
               </p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
-            <div class="services-card text-center p-4">
-              <div class="icon text-primary">
-                <i
-                  class="mdi mdi-search-web h3 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"
-                ></i>
-              </div>
-              <div class="content mt-3">
-                <h5 class="text-dark mt-2">Web Development</h5>
-                <p class="text-muted mt-2">
-                  Various versions have evolved over the years, sometimes by on
-                  purpose injected and the like.
-                </p>
-                <div class="read-more fs-6">
-                  <a href="#" class="text-dark"> Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      </section>
+      <!-- yaha per trusted section ki structuring end hoty he  -->
 
-          <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
-            <div class="services-card text-center p-4">
-              <div class="icon text-primary">
-                <i
-                  class="mdi mdi-monitor h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"
-                ></i>
-              </div>
-              <div class="content mt-3">
-                <h5 class="text-dark mt-2">Unique Experience</h5>
-                <p class="text-muted mt-2">
-                  Various versions have evolved over the years, sometimes by on
-                  purpose injected and the like.
-                </p>
-                <div class="read-more fs-6">
-                  <a href="#" class="text-dark"> Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
-            <div class="services-card text-center p-4">
-              <div class="icon text-primary">
-                <i
-                  class="mdi mdi-cellphone h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"
-                ></i>
-              </div>
-              <div class="content mt-3">
-                <h5 class="text-dark mt-2">Responsive Layouts</h5>
-                <p class="text-muted mt-2">
-                  Various versions have evolved over the years, sometimes by on
-                  purpose injected and the like.
-                </p>
-                <div class="read-more fs-6">
-                  <a href="#" class="text-dark"> Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
-            <div class="services-card text-center p-4">
-              <div class="icon text-primary">
-                <i
-                  class="mdi mdi-lead-pencil h4 h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"
-                ></i>
-              </div>
-              <div class="content mt-3">
-                <h5 class="text-dark mt-2">Creative Design</h5>
-                <p class="text-muted mt-2">
-                  Various versions have evolved over the years, sometimes by on
-                  purpose injected and the like.
-                </p>
-                <div class="read-more fs-6">
-                  <a href="#" class="text-dark"> Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
-            <div class="services-card text-center p-4">
-              <div class="icon text-primary">
-                <i
-                  class="mdi mdi-eye h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"
-                ></i>
-              </div>
-              <div class="content mt-3">
-                <h5 class="text-dark mt-2">Retina Ready Graphics</h5>
-                <p class="text-muted mt-2">
-                  Various versions have evolved over the years, sometimes by on
-                  purpose injected and the like.
-                </p>
-                <div class="read-more fs-6">
-                  <a href="#" class="text-dark"> Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
-            <div class="services-card text-center p-4">
-              <div class="icon text-primary">
-                <i
-                  class="mdi mdi-text-shadow h3 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle rounded-circle"
-                ></i>
-              </div>
-              <div class="content mt-3">
-                <h5 class="text-dark mt-2">Customizable Fonts</h5>
-                <p class="text-muted mt-2">
-                  Various versions have evolved over the years, sometimes by on
-                  purpose injected and the like.
-                </p>
-                <div class="read-more mt-2 fs-6">
-                  <a href="#" class="text-dark"> Read More</a>
-                </div>
+      <!-- yaha se about k section ki structuring shuru ho rahi he  -->
+      <section id="about-section">
+        <div class="about-section-div about-pic-div">
+          <div id="image1">
+            <div id="image2">
+              <div id="playicon">
+                <img src="./Assets/about-section/play.svg" alt="" />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="about-section-div about-content-div">
+          <p class="about-pera1">get to know us</p>
+          <p class="about-heading">About Us</p>
+          <p class="about-peragraph">
+            We are so excited and proud of our business. It's really easy to
+            create a landing page for your awesome business.
+          </p>
+          <p class="about-peragraph">
+            Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est
+            quis arcu posuere condimentum. Nullam justo eros, pellentesque a
+            metus non, mattis volutpat libero. Praesent ornare felis ante, sit
+            amet porta felis pellentesque fermentum.
+          </p>
+          <button class="about-btn">read more</button>
+        </div>
+      </section>
+      <!-- yaha per about k section ki structuring end hoty he  -->
 
-    <!-- ==========================================================================
-                     Testamonial section start
-    ============================================================================= -->
-    <section class="testimonial">
-      <div class="box"></div>
-      <div class="overlay2"></div>
-      <div class="container">
-        <div class="row">
-          <div
-            class="bg-white mx-auto text-center rounded testimonial-card"
-            style="width: 356 !important"
-          >
-            <img src="./assets/images/svg/double-quote.svg" />
-            <p class="text font-italic text-muted mb-0">
+      <!-- yaha se cta section ki structuring shuru ho rahi he  -->
+      <section id="cta-section">
+        <div class="overlay"></div>
+        <div class="cta-content">
+          <p id="cta-heading">Let's get Started !</p>
+          <p id="cta-pera">
+            Paying attention to what our customers want and what they say is the
+            most important value in Stylemix.
+          </p>
+          <button id="cta-button">BUY NOW</button>
+        </div>
+      </section>
+      <!-- yaha per hamre cta section ki structuring end hoty he  -->
+
+      <!-- yaha se hamare why us section ki structuring shuru ho rahi he  -->
+      <section class="why-us-section">
+        <p class="why-us">why us</p>
+        <p class="why-us-heading">Why Choose Us ?</p>
+        <p class="why-us-pera">
+          We are so excited and proud of our business. It's really easy to
+          create a landing page for your awesome business.
+        </p>
+        <div class="why-us-divs">
+          <div class="why-us-div">
+            <img
+              class="div-icon"
+              src="./Assets/why-us-section/globe-search.svg"
+              alt=""
+            />
+            <p class="div-heading">Web Development</p>
+            <p class="div-pera">
+              Various versions have evolved over the years, sometimes by on
+              purpose injected and the like.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="why-us-div">
+            <img class="div-icon" src="./Assets/why-us-section/tv.svg" alt="" />
+            <p class="div-heading">Unique Experience</p>
+            <p class="div-pera">
+              Various versions have evolved over the years, sometimes by on
+              purpose injected and the like.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="why-us-div">
+            <img
+              class="div-icon"
+              src="./Assets/why-us-section/layout.svg"
+              alt=""
+            />
+            <p class="div-heading">Responsive Layouts</p>
+            <p class="div-pera">
+              Various versions have evolved over the years, sometimes by on
+              purpose injected and the like.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="why-us-div">
+            <img
+              class="div-icon"
+              src="./Assets/why-us-section/pen.svg"
+              alt=""
+            />
+            <p class="div-heading">Creative Design</p>
+            <p class="div-pera">
+              Various versions have evolved over the years, sometimes by on
+              purpose injected and the like.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="why-us-div">
+            <img
+              class="div-icon"
+              src="./Assets/why-us-section/eye.svg"
+              alt=""
+            />
+            <p class="div-heading">Retina Ready Graphics</p>
+            <p class="div-pera">
+              Various versions have evolved over the years, sometimes by on
+              purpose injected and the like.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="why-us-div">
+            <img
+              class="div-icon"
+              src="./Assets/why-us-section/customizefont.svg"
+              alt=""
+            />
+            <p class="div-heading">Customizable Fonts</p>
+            <p class="div-pera">
+              Various versions have evolved over the years, sometimes by on
+              purpose injected and the like.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </section>
+      <!-- yaha per hamare  why us section ki structuring end hoty he  -->
+
+      <!-- yaha se hamare testi section ki structuring shuru ho rahi he  -->
+      <section id="testi-section">
+        <div id="testi-outer-div">
+          <div class="testi-div">
+            <img
+              class="qoutes"
+              src="./Assets/testi-section/qoutes.png"
+              alt=""
+            />
+            <p class="testi-pera1">
               " It seems that only fragments of the original text remain in the
               Lorem Ipsum texts used today. One may speculate that over the
               course of time certain. "
             </p>
-            <div class="testimonial-image mt-3 pt-2 mx-auto">
+            <img
+              class="testi-pic"
+              src="./Assets/testi-section/testi1.jpeg"
+              alt=""
+            />
+            <h3>Benny Berds</h3>
+            <p class="testi-pera2">Businessman</p>
+            <span class="star-wrap">
               <img
-                src="./assets/images/testi/01.jpg"
-                class="img-fluid mx-auto d-block rounded-circle"
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
                 alt=""
               />
-              <h6 class="name text-uppercase text-muted mt-3 mb-1">
-                Benny Berds
-              </h6>
-              <h6 class="name-text text-muted fw-normal">Businessman</h6>
-            </div>
-            <ul class="review list-unstyled mb-0 mt-2">
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-            </ul>
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+            </span>
           </div>
-          <div
-            class="bg-white mx-auto text-center rounded testimonial-card"
-            style="width: 356 !important"
-          >
-            <img src="./assets/images/svg/double-quote.svg" />
-            <p class="text font-italic text-muted mb-0">
+
+          <div class="testi-div">
+            <img
+              class="qoutes"
+              src="./Assets/testi-section/qoutes.png"
+              alt=""
+            />
+            <p class="testi-pera1">
               " It seems that only fragments of the original text remain in the
               Lorem Ipsum texts used today. One may speculate that over the
               course of time certain. "
             </p>
-            <div class="testimonial-image mt-3 pt-2 mx-auto">
+            <img
+              class="testi-pic"
+              src="./Assets/testi-section/testi2.jpeg"
+              alt=""
+            />
+            <h3>Jane Wran</h3>
+            <p class="testi-pera2">Director</p>
+            <span class="star-wrap">
               <img
-                src="./assets/images/testi/01.jpg"
-                class="img-fluid mx-auto d-block rounded-circle"
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
                 alt=""
               />
-              <h6 class="name text-uppercase text-muted mt-3 mb-1">
-                Benny Berds
-              </h6>
-              <h6 class="name-text text-muted fw-normal">Businessman</h6>
-            </div>
-            <ul class="review list-unstyled mb-0 mt-2">
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-            </ul>
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+            </span>
           </div>
-          <div
-            class="bg-white mx-auto text-center rounded testimonial-card"
-            style="width: 356 !important"
-          >
-            <img src="./assets/images/svg/double-quote.svg" />
-            <p class="text font-italic text-muted mb-0">
+
+          <div class="testi-div">
+            <img
+              class="qoutes"
+              src="./Assets/testi-section/qoutes.png"
+              alt=""
+            />
+            <p class="testi-pera1">
               " It seems that only fragments of the original text remain in the
               Lorem Ipsum texts used today. One may speculate that over the
               course of time certain. "
             </p>
-            <div class="testimonial-image mt-3 pt-2 mx-auto">
+            <img
+              class="testi-pic"
+              src="./Assets/testi-section/testi3.jpeg"
+              alt=""
+            />
+            <h3>Barb Tomfield</h3>
+            <p class="testi-pera2">Manager</p>
+            <span class="star-wrap">
               <img
-                src="./assets/images/testi/01.jpg"
-                class="img-fluid mx-auto d-block rounded-circle"
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
                 alt=""
               />
-              <h6 class="name text-uppercase text-muted mt-3 mb-1">
-                Benny Berds
-              </h6>
-              <h6 class="name-text text-muted fw-normal">Businessman</h6>
-            </div>
-            <ul class="review list-unstyled mb-0 mt-2">
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="fa-solid fa-star text-warning fs-6"></i>
-              </li>
-            </ul>
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+            </span>
+          </div>
+
+          <div class="testi-div">
+            <img
+              class="qoutes"
+              src="./Assets/testi-section/qoutes.png"
+              alt=""
+            />
+            <p class="testi-pera1">
+              " It seems that only fragments of the original text remain in the
+              Lorem Ipsum texts used today. One may speculate that over the
+              course of time certain. "
+            </p>
+            <img
+              class="testi-pic"
+              src="./Assets/testi-section/testi4.jpeg"
+              alt=""
+            />
+            <h3>Fred Sink</h3>
+            <p class="testi-pera2">Businessman</p>
+            <span class="star-wrap">
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+              <img
+                class="star-img"
+                src="./Assets/testi-section/star.svg"
+                alt=""
+              />
+            </span>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- ==========================================================================
-                     Prcing section start
-    ============================================================================= -->
-    <section class="team">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <span
-                class="badge text-uppercase text-primary py-2 px-3 rounded-pill mb-2"
-                >what special</span
-              >
-              <h3 class="title mb-4">Management Team</h3>
-              <p class="para-desc">
-                We are so excited and proud of our business. It's really easy to
-                create a landing page for<br />your awesome business.
+      </section>
+      <!-- yaha per hamare testi section ki structuring end hoty he  -->
+
+      <!-- yaha se hamara deals ka section start ho raha he our yaha per wohi case he k sectoin ki styling uper k sat same he tho uper ki class ka use kiya he  -->
+      <section class="why-us-section" id="take-deals">
+        <p class="why-us">get some deal</p>
+        <p class="why-us-heading">Pick the best plan</p>
+        <p class="why-us-pera">
+          We are so excited and proud of our business. It's really easy to
+          create a landing page for your awesome business.
+        </p>
+        <div class="deals-div">
+          <div class="deal">
+            <div class="deal-start-div">
+              <h3>Starter</h3>
+              <p>Suitable for Starter</p>
+            </div>
+            <div class="deals-charges-div">
+              <h2>$ 0.00 /mo</h2>
+            </div>
+            <div class="deals-advantages">
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Full Access
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Enhanced Security
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Source Files
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                1 Domain Free
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Free Appointments
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Free Installment
               </p>
             </div>
+            <div class="deals-btn">
+              <button>FREE SIGNUP</button>
+            </div>
+          </div>
+          <div class="deal">
+            <div class="deal-start-div">
+              <h3>Professional</h3>
+              <p>Suitable for Starter</p>
+            </div>
+            <div class="deals-charges-div">
+              <h2>$ 9.99 /mo</h2>
+            </div>
+            <div class="deals-advantages">
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Full Access
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Enhanced Security
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Source Files
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                1 Domain Free
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Free Appointments
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Free Installment
+              </p>
+            </div>
+            <div class="deals-btn">
+              <button>SUBSCRIBE NOW</button>
+            </div>
+          </div>
+          <div id="third-deal" class="deal">
+            <div class="deal-start-div">
+              <h3>Standard</h3>
+              <p>Suitable for Starter</p>
+            </div>
+            <div class="deals-charges-div">
+              <h2>$ 19.99 /mo</h2>
+            </div>
+            <div class="deals-advantages">
+              <p>
+                <img
+                  class="deals-arrow blue-arrow"
+                  src="./Assets/deals-section/bluearrow.svg"
+                  alt=""
+                />
+                Full Access
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/bluearrow.svg"
+                  alt=""
+                />
+                Enhanced Security
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/bluearrow.svg"
+                  alt=""
+                />
+                Source Files
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/bluearrow.svg"
+                  alt=""
+                />
+                1 Domain Free
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/bluearrow.svg"
+                  alt=""
+                />
+                Free Appointments
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/bluearrow.svg"
+                  alt=""
+                />
+                Free Installment
+              </p>
+            </div>
+            <div class="deals-btn blue-btn">
+              <button>BUY NOW</button>
+            </div>
+          </div>
+          <div class="deal">
+            <div class="deal-start-div">
+              <h3>Premium</h3>
+              <p>Suitable for Starter</p>
+            </div>
+            <div class="deals-charges-div">
+              <h2>$ 29.99 /mo</h2>
+            </div>
+            <div class="deals-advantages">
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Full Access
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Enhanced Security
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Source Files
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                1 Domain Free
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Free Appointments
+              </p>
+              <p>
+                <img
+                  class="deals-arrow"
+                  src="./Assets/deals-section/arrowright.svg"
+                  alt=""
+                />
+                Free Installment
+              </p>
+            </div>
+            <div class="deals-btn">
+              <button>BUY PREMIUM</button>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div
-              class="team-member text-center position-relative overflow-hidden mb-4 shadow rounded"
-            >
-              <div class="member-pic position-relative">
-                <img
-                  src="./assets/images/team/1.jpg"
-                  class="img-fluid d-block mx-auto"
-                  alt="img"
-                />
-                <div class="team-overlay">
-                  <div class="team-info text-center">
-                    <h5 class="member-name">
-                      <a href="page-team-detail.html" class="text-white mb-0"
-                        >Steve Mathew</a
-                      >
-                    </h5>
-                    <span class="text-white-50 fs-6">Founder &amp; CEO</span>
-                    <div class="mt-2">
-                      <ul class="list-unstyled social-icons mb-0">
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-facebook-f" title="facebook"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-linkedin-in" title="linkedin"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-instagram" title="instagram"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-twitter" title="twitter"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--end col-->
+      </section>
+      <!-- yaha per hamare deals k section ki structuring ka end hota he  -->
 
-          <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div
-              class="team-member text-center position-relative overflow-hidden mb-4 shadow rounded"
-            >
-              <div class="member-pic position-relative">
+      <!-- yaha se hamara what special ka section start ho raha he our yaha per wohi case he k sectoin ki styling uper k sat same he tho uper ki class ka use kiya he  -->
+      <section id="what-special" class="why-us-section">
+        <p class="why-us">what special</p>
+        <h2 class="why-us-heading">Management Team</h2>
+        <p class="why-us-pera">
+          We are so excited and proud of our business. It's really easy to
+          create a landing page for your awesome business.
+        </p>
+        <div class="member-div">
+          <div class="team member1">
+            <div class="member-contant">
+              <h2>Steve Mathew</h2>
+              <p>Founder & CEO</p>
+              <div>
                 <img
-                  src="./assets/images/team/2.jpg"
-                  class="img-fluid d-block mx-auto"
-                  alt="img"
+                  class="team-icons"
+                  src="./Assets/footer/facebook.svg"
+                  alt=""
                 />
-                <div class="team-overlay">
-                  <div class="team-info text-center">
-                    <h5 class="member-name">
-                      <a href="page-team-detail.html" class="text-white mb-0"
-                        >Jonny Ray</a
-                      >
-                    </h5>
-                    <span class="text-white-50 fs-6">Co-Founder</span>
-                    <div class="mt-2">
-                      <ul class="list-unstyled social-icons mb-0">
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-facebook-f" title="facebook"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-linkedin-in" title="linkedin"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-instagram" title="instagram"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-twitter" title="twitter"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/linkedin.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/insta.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/twitter.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <!--end col-->
-
-          <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div
-              class="team-member text-center position-relative overflow-hidden mb-4 shadow rounded"
-            >
-              <div class="member-pic position-relative">
+          <div class="team member2">
+            <div class="member-contant">
+              <h2>Jonny Ray</h2>
+              <p>Co-Founder</p>
+              <div>
                 <img
-                  src="./assets/images/team/4.jpg"
-                  class="img-fluid d-block mx-auto"
-                  alt="img"
+                  class="team-icons"
+                  src="./Assets/footer/facebook.svg"
+                  alt=""
                 />
-                <div class="team-overlay">
-                  <div class="team-info text-center">
-                    <h5 class="member-name">
-                      <a href="page-team-detail.html" class="text-white mb-0"
-                        >Sushy Depp</a
-                      >
-                    </h5>
-                    <span class="text-white-50 fs-6">Manager</span>
-                    <div class="mt-2">
-                      <ul class="list-unstyled social-icons mb-0">
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-facebook-f" title="facebook"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-linkedin-in" title="linkedin"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-instagram" title="instagram"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-twitter" title="twitter"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/linkedin.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/insta.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/twitter.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <!--end col-->
-
-          <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div
-              class="team-member text-center position-relative overflow-hidden mb-4 shadow rounded"
-            >
-              <div class="member-pic position-relative">
+          <div class="team member3">
+            <div class="member-contant">
+              <h2>Sushy Depp</h2>
+              <p>Manager</p>
+              <div>
                 <img
-                  src="./assets/images/team/3.jpg"
-                  class="img-fluid d-block mx-auto"
-                  alt="img"
+                  class="team-icons"
+                  src="./Assets/footer/facebook.svg"
+                  alt=""
                 />
-                <div class="team-overlay">
-                  <div class="team-info text-center">
-                    <h5 class="member-name">
-                      <a href="page-team-detail.html" class="text-white mb-0"
-                        >Drany Perk</a
-                      >
-                    </h5>
-                    <span class="text-white-50 fs-6">Senior Designer</span>
-                    <div class="mt-2">
-                      <ul class="list-unstyled social-icons mb-0">
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-facebook-f" title="facebook"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-linkedin-in" title="linkedin"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-instagram" title="instagram"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                            <i class="fab fa-twitter" title="twitter"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/linkedin.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/insta.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/twitter.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <!--end col-->
+          <div class="team member4">
+            <div class="member-contant">
+              <h2>Drany Perk</h2>
+              <p>Senior Designer</p>
+              <div>
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/facebook.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/linkedin.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/insta.svg"
+                  alt=""
+                />
+                <img
+                  class="team-icons"
+                  src="./Assets/footer/twitter.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- yaha per hamare what special k section ki structuring ka end hota he  -->
 
-    <!-- ==========================================================================
-                     settig and scrollback section start
-    ============================================================================= -->
+      <!-- yaha se hamara what news ka section start ho raha he our yaha per wohi case he k sectoin ki styling uper k sat same he tho uper ki class ka use kiya he  -->
+      <section class="why-us-section">
+        <p class="why-us">some news</p>
+        <h2 class="why-us-heading">News & Announcements</h2>
+        <p class="why-us-pera">
+          We are so excited and proud of our business. It's really easy to
+          create a landing page for <br />
+          your awesome business.
+        </p>
+        <div class="news-outer-div">
+          <div class="news">
+            <div class="news-img img1">
+              <div class="news-img-overlay">
+                <button>
+                  <img src="./Assets/some-news/icon.svg" alt="" />BUSINESS
+                </button>
+                <a href="#">Read More </a>
+              </div>
+            </div>
+            <div class="img-content">
+              <h3>Building Your Corporate Identity For Business</h3>
+              <p>
+                The most well-known dummy text is the 'Lorem Ipsum', in the 16th
+                century.
+              </p>
+            </div>
+            <div class="likes-div">
+              <span>
+                <img
+                  class="comment-likes"
+                  src="./Assets/some-news/heart.svg"
+                  alt=""
+                />
+                400 Like</span
+              >
+              <span>
+                <img
+                  class="comment-likes"
+                  src="./Assets/some-news/comment.svg"
+                  alt=""
+                />
+                8 Comments</span
+              >
+            </div>
+          </div>
+          <div class="news">
+            <div class="news-img img2">
+              <div class="news-img-overlay">
+                <button>
+                  <img src="./Assets/some-news/icon.svg" alt="" />FINANCE
+                </button>
+                <a href="#">Read More </a>
+              </div>
+            </div>
+            <div class="img-content">
+              <h3>Connect Yourself With Corporate Recruiters</h3>
+              <p>
+                The most well-known dummy text is the 'Lorem Ipsum', in the 16th
+                century.
+              </p>
+            </div>
+            <div class="likes-div">
+              <span>
+                <img
+                  class="comment-likes"
+                  src="./Assets/some-news/heart.svg"
+                  alt=""
+                />
+                620 Like</span
+              >
+              <span>
+                <img
+                  class="comment-likes"
+                  src="./Assets/some-news/comment.svg"
+                  alt=""
+                />
+                6 Comments</span
+              >
+            </div>
+          </div>
+          <div class="news">
+            <div class="news-img img3">
+              <div class="news-img-overlay">
+                <button>
+                  <img src="./Assets/some-news/icon.svg" alt="" />INVESTMENT
+                </button>
+                <a href="#">Read More </a>
+              </div>
+            </div>
+            <div class="img-content">
+              <h3>Information You Should Know For Business</h3>
+              <p>
+                The most well-known dummy text is the 'Lorem Ipsum', in the 16th
+                century.
+              </p>
+            </div>
+            <div class="likes-div">
+              <span>
+                <img
+                  class="comment-likes"
+                  src="./Assets/some-news/heart.svg"
+                  alt=""
+                />
+                923 Like</span
+              >
+              <span>
+                <img
+                  class="comment-likes"
+                  src="./Assets/some-news/comment.svg"
+                  alt=""
+                />
+                9 Comments</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- yaha per hamare what news k section ki structuring ka end hota he  -->
+
+      <!-- yaha se hamara compnies ka section shuru ho raha uski structuring  -->
+      <section id="companies-section">
+        <div class="companies-inner-div">
+          <img src="./Assets/companies-section/1.png" alt="" />
+          <img src="./Assets/companies-section/2.png" alt="" />
+          <img src="./Assets/companies-section/3.png" alt="" />
+          <img src="./Assets/companies-section/4.png" alt="" />
+          <img src="./Assets/companies-section/5.png" alt="" />
+          <img src="./Assets/companies-section/6.png" alt="" />
+          <img src="./Assets/companies-section/7.png" alt="" />
+          <img src="./Assets/companies-section/8.png" alt="" />
+          <img src="./Assets/companies-section/9.png" alt="" />
+          <img src="./Assets/companies-section/10.png" alt="" />
+          <img src="./Assets/companies-section/1.png" alt="" />
+          <img src="./Assets/companies-section/2.png" alt="" />
+          <img src="./Assets/companies-section/3.png" alt="" />
+          <img src="./Assets/companies-section/4.png" alt="" />
+          <img src="./Assets/companies-section/5.png" alt="" />
+          <img src="./Assets/companies-section/6.png" alt="" />
+          <img src="./Assets/companies-section/7.png" alt="" />
+          <img src="./Assets/companies-section/8.png" alt="" />
+          <img src="./Assets/companies-section/9.png" alt="" />
+          <img src="./Assets/companies-section/10.png" alt="" />
+        </div>
+      </section>
+      <!-- yaha per hamare companies k section ki structuring ka end ho raha he  -->
+    </main>
+    <!-- finally yaha per hamara main section end hota he  -->
+
+    <!-- yaha se hamare footer ki structuring shuro ho rahi he  -->
     <footer>
-      <div class="footer-top">
-        <div class="footer-top-item footer-about">
-          <a href="#" class="footer-logo">
-            <img src="./assets/images/logo-light.png" alt="" />
-          </a>
-          <p class="footer-about-text">
+      <div class="footer-div">
+        <div id="footer-logo-div">
+          <img src="./Assets/footer/logo-light.png" alt="" />
+          <p>
             Using this template you can make beautiful landing pages without any
             major hardwork.
           </p>
-          <div class="footer-socials">
-            <a href="#">
-              <img
-                src="./assets/images/footer/svg/facebook.svg"
-                width="16"
-                alt="facebook icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/images/footer/svg/insta.svg"
-                width="16"
-                alt="instagram icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/images/footer/svg/outlined_twitter.svg"
-                width="16"
-                alt="twitter icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/images/footer/svg/linkedin.svg"
-                width="16"
-                alt="linkedin icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/images/footer/svg/dribbble.svg"
-                width="16"
-                alt="dribbble icon"
-              />
-            </a>
+          <div>
+            <span>
+              <a href="#"
+                ><img
+                  class="footer-icon"
+                  src="./Assets/footer/facebook.svg"
+                  alt=""
+              /></a>
+            </span>
+            <span>
+              <a href="#">
+                ><img
+                  class="footer-icon"
+                  src="./Assets/footer/insta.svg"
+                  alt=""
+              /></a>
+            </span>
+            <span>
+              <a href="#"
+                ><img
+                  class="footer-icon"
+                  src="./Assets/footer/twitter.svg"
+                  alt=""
+              /></a>
+            </span>
+            <span>
+              <a href="#"
+                ><img
+                  class="footer-icon"
+                  src="./Assets/footer/linkedin.svg"
+                  alt=""
+              /></a>
+            </span>
+            <span>
+              <a href="#"
+                ><img
+                  class="footer-icon"
+                  src="./Assets/footer/internet.svg"
+                  alt=""
+              /></a>
+            </span>
           </div>
         </div>
-        <div class="footer-top-item company-links">
-          <h3>Company</h3>
-          <ul>
-            <li>
-              <a href="#aboutus">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Aboutus</span>
-              </a>
-            </li>
-            <li>
-              <a href="#services">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Services</span>
-              </a>
-            </li>
-            <li>
-              <a href="#team">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Team</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Pricing</span>
-              </a>
-            </li>
-            <li>
-              <a href="#features">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Features</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-top-item useful-links">
-          <h3>Usefull Links</h3>
-          <ul>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Privacy Protection</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Safe Payments</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Terms of Services</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Documentation</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/images/footer/svg/right_bracket_arrow.svg"
-                  width="8"
-                  alt="right_bracket_arrow_icon"
-                />
-                <span>Privacy Policy</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="contact" class="footer-top-item bizcell-store">
-          <h3>Bizcell Store</h3>
-          <address>
-            <div class="address-item location">
+        <div id="links-footer">
+          <div class="footer-links">
+            <p>Company</p>
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Aboutus</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Services</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Team</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Pricing</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Features</a
+            >
+          </div>
+          <div class="footer-links">
+            <p>Usefull Links</p>
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Privacy Protection</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Safe Payments</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Terms of Services</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Documentation</a
+            >
+            <a href="#">
+              <img id="right-icon" src="./Assets/footer/arrow.svg" alt="" />
+              Privacy Policy</a
+            >
+          </div>
+          <div class="footer-address">
+            <p id="heading">Bizcell Store</p>
+            <p>
               <img
-                src="./assets/images/footer/svg/location.svg"
-                width="15"
-                alt="location icon"
+                class="address-icons"
+                src="./Assets/footer/address/location.svg"
+                alt=""
               />
-              <p>3/2/64 Mongus Street, UK</p>
-            </div>
-            <div class="address-item mail">
+              3/2/64 Mongus Street, UK
+            </p>
+            <p>
               <img
-                src="./assets/images/footer/svg/mail.svg"
-                width="15"
-                alt="mail icon"
+                class="address-icons"
+                src="./Assets/footer/address/email.svg"
+                alt=""
               />
-              <p>name@domain.com</p>
-            </div>
-            <div class="address-item phone">
+              name@domain.com
+            </p>
+            <p>
               <img
-                src="./assets/images/footer/svg/phone.svg"
-                width="15"
-                alt="phone icon"
+                class="address-icons"
+                src="./Assets/footer/address/phone.svg"
+                alt=""
               />
-              <p>+(125) 215-4561</p>
-            </div>
-            <div class="address-item website">
+              +(125) 215-4561
+            </p>
+            <p>
               <img
-                src="./assets/images/footer/svg/website.svg"
-                width="15"
-                alt="website icon"
+                class="address-icons"
+                src="./Assets/footer/address/globe.svg"
+                alt=""
               />
-              <p>www.yourdomain.com</p>
-            </div>
-            <div class="address-item twitter">
+              www.yourdomain.com
+            </p>
+            <p>
               <img
-                src="./assets/images/footer/svg/filled_twitter.svg"
-                width="15"
-                alt="twitter icon"
+                class="address-icons"
+                src="./Assets/footer/address/twitter.svg"
+                alt=""
               />
-              <p>yourname_tweet</p>
-            </div>
-          </address>
+              yourname_tweet
+            </p>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>
-          <span>© 2025 Bizcell. Design with</span>
-          <img
-            src="./assets/images/footer/svg/heart.svg"
-            width="16"
-            alt="heart icon"
-          />
-          <span>by Shreethemes.</span>
-        </p>
-        <div class="visa-cards">
-          <img
-            src="./assets/images/footer/american-ex.png"
-            width="36"
-            alt="american-express visa card image"
-          />
-          <img
-            src="./assets/images/footer/discover.png"
-            width="36"
-            alt="discover visa card image"
-          />
-          <img
-            src="./assets/images/footer/master-card.png"
-            width="36"
-            alt="master-card visa card image"
-          />
-          <img
-            src="./assets/images/footer/paypal.png"
-            width="36"
-            alt="paypal visa card image"
-          />
-          <img
-            src="./assets/images/footer/visa.png"
-            width="36"
-            alt="visa visa card image"
-          />
+      <div>
+        <div class="copy-right-div">
+          <p>© 2025 Bizcell. Design with 🧡 by Saqib Qureshi.</p>
+          <div>
+            <img src="./Assets/footer/companies-logo/american-ex.png" alt="" />
+            <img src="./Assets/footer/companies-logo/discover.png" alt="" />
+            <img src="./Assets/footer/companies-logo/master-card.png" alt="" />
+            <img src="./Assets/footer/companies-logo/paypal.png" alt="" />
+            <img src="./Assets/footer/companies-logo/visa.png" alt="" />
+          </div>
         </div>
       </div>
     </footer>
-    <!-- ==========================================================================
-                     settig and scrollback section start
-    ============================================================================= -->
-    <div class="bottom">
-      <a href="javascript: void(0);" class="settings bg-white shadow d-block"
-        ><i class="fa-solid fa-gear"></i
-      ></a>
-    </div>
-    <script src="./assets/bootstrap.bundle.min.js"></script>
+    <!-- yaha  per hamare footer section ki structuring end hoty he  -->
   </body>
 </html>

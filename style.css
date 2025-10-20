@@ -1,189 +1,196 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@font-face {
+  font-family: "DNSans";
+  src: url(./Assets/fonts-family/DMSans-variable.ttf) format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DNSans";
 }
-
-a {
-  text-decoration: none;
+/* yaha se header ki styling  shuru hoty he  */
+.header {
+  height: 70px;
+  background-color: white;
+  position: relative;
 }
-
-.settings {
-  /* background: none repeat scroll 0 0 transparent; */
-  height: 41px;
+.navbar {
   position: fixed;
-  /* right: -41px; */
-  top: 150px;
-  width: 40px;
-  padding: 3px;
-  border-radius: 0 30px 30px 0;
-  z-index: 99999;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
 }
-.settings i {
-  color: #764af1 !important;
-  font-size: 22px;
-  margin: 8px 1px 8px 4px;
-  animation: rotate 1.8s linear infinite; /* smooth infinite rotation */
+.menu-icon {
+  display: none;
+  width: 70px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid rgb(191, 189, 189);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.menu-icon:hover {
+  scale: 1.1;
+}
+.menu-icon:active {
+  scale: 0.9;
+}
+.links > ul {
+  display: flex;
+  list-style: none;
+}
+.links > ul > li > a {
+  text-decoration: none;
+  color: black;
+  margin: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+}
+.links > ul > li > a:hover {
+  color: #764af1;
+}
+.links > ul > li > input {
+  background-image: url(./Assets/Navbar/search.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  padding-left: 30px;
+  color: #5118ef;
 }
 
-@keyframes rotate {
-  0% {
+/* yaha per header ki styling end hoty he  */
+
+/* yaha se home section ki styling shuru hoty he  */
+#home-section {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 108vh;
+  background: rgba(36, 35, 57, 0.769); /* black overlay with 50% opacity */
+  z-index: 1; /* behind text */
+}
+
+.home-content {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  row-gap: 2rem;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* overlay ke upar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.home-content > h1 {
+  color: white;
+  font-size: 6vmin;
+  font-weight: 500;
+  text-align: center;
+}
+.home-content > p {
+  color: rgb(183, 180, 180);
+}
+.home-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #764af1;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+.home-btn:hover {
+  background-color: #5a23f1;
+}
+.setting-icon {
+  height: 40px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 4;
+  background-color: white;
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+.setting-icon > img {
+  height: 40px;
+  animation: rotateIcon 2s linear infinite;
+}
+@keyframes rotateIcon {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
-
-/* ==========================================================================
-                      Navbar section styling
-============================================================================= */
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  padding: 15px 7.5rem;
-  background-color: white;
-  border: 0;
-  transition: all 0.5s ease;
-  background-color: transparent;
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 3px rgba(22, 28, 45, 0.15);
-}
-.navbar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-}
-.navbar ul li a {
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 24px;
-  color: black;
-}
-.navbar ul li .navlink:hover {
-  color: #764af1;
-}
-.navbar ul li i {
-  font-size: 18px;
-  margin-left: -20px;
-}
-
-/* ==========================================================================
-                      Hero section styling
-============================================================================= */
-.hero {
-  width: 100%;
-  height: 100vh;
+/* ye background  image animation  ki stylng he  */
+.slideshow {
   position: relative;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: 100;
 }
 
-.bg-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(22, 28, 45, 0.7);
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(22, 28, 45, 0.4) 10%,
-    rgba(22, 28, 45, 0.5) 50%,
-    rgba(22, 28, 45, 0.9) 75%,
-    #161c2d 100%
-  ) !important;
-}
-.hero-content {
-  margin-top: 60px;
-  text-align: center;
-}
-.hero-title {
-  font-size: 42px;
-  font-weight: 500;
-  line-height: 59px;
-  color: #ffffff;
-  margin-bottom: 35px;
-}
-.hero-text {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 35px;
-}
-.svg {
-  position: absolute;
-  bottom: -10px;
-  transform: scale(2);
-  width: 100%;
-}
-
-.hero-btn {
-  padding: 8px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 21px;
-  color: White;
-  background-color: #764af1;
-  transition: all 0.3s ease;
-}
-.hero-btn:hover {
-  color: #ffffff;
-  background-color: #521bed;
-}
-/* Common styles for slides */
 .slide {
   position: absolute;
+  width: 100%;
+  height: 100vh;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
   transform: scale(1);
-  animation: slideAnim 15s infinite; /* 5s per image */
+  animation: fadeBlink 12s infinite;
 }
 
 .slide1 {
-  background-image: url("./assets/images/bg/bg01.jpg");
+  background-image: url("./Assets/Home-section/bg01.jpeg");
   animation-delay: 0s;
 }
-
 .slide2 {
-  background-image: url("./assets/images/bg/bg02.jpg");
-  animation-delay: 5s;
+  background-image: url("./Assets/Home-section/bg02.jpeg");
+  animation-delay: 4s;
 }
-
 .slide3 {
-  background-image: url("./assets/images/bg/bg03.jpg");
-  animation-delay: 10s;
+  background-image: url("./Assets/Home-section/bg03.jpeg");
+  animation-delay: 8s;
 }
 
-/* Keyframes: fade in + scale up, then scale down + fade out */
-@keyframes slideAnim {
+/* Keyframes for slow fade out + fast blink in */
+@keyframes fadeBlink {
   0% {
     opacity: 0;
     transform: scale(1);
   }
-  5% {
-    opacity: 1;
+  20% {
+    opacity: 0;
     transform: scale(1.05);
   }
   25% {
@@ -193,7 +200,7 @@ a {
   55% {
     opacity: 1;
     transform: scale(1.02);
-  }
+  } /* slowly fade out */
   70% {
     opacity: 1;
     transform: scale(1);
@@ -201,595 +208,1066 @@ a {
   80% {
     opacity: 0;
     transform: scale(1);
-  }
+  } /* blink in instantly */
   100% {
     opacity: 0;
     transform: scale(1);
   }
 }
+/* yaha tak background image animation he  */
 
-/* ==========================================================================
-                      Feature section styling
-============================================================================= */
-.feature {
+.bottom-image {
+  position: absolute;
+  bottom: 0;
+  transform: scale(2);
+  z-index: 3;
+}
+/* yaha per home section ki styling  end hoty he  */
+
+/* yaha per trusted partners waghera k section ki styling shuru hoty he  */
+.trusted-section {
+  position: relative;
+  width: 100%;
+  background-color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 100px 50px;
-  background-color: #ffffff;
-  gap: 20px;
-  z-index: 100;
 }
-.feature-primary {
-  position: relative;
-  width: 360px;
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  top: -2.3rem;
+  z-index: 4;
+  background-color: #f2f1fa;
+  padding: 0.9rem 1rem;
+  border-radius: 50%;
+}
+.arrow > img {
+  height: 20px;
+}
+.arrow:hover {
+  background-color: #5118ef;
+  color: white;
+}
+
+.partners {
+  width: 90%;
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 3px rgba(22, 28, 45, 0.15) !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-
-.feature-content .feature-title {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
-  transition: all 0.3s ease;
+.partners-div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  padding: 2vw;
+  border: 1px solid rgba(190, 188, 188, 0.577);
 }
-.feature-content .feature-title:hover {
-  color: #764af1;
+.partners-div:hover .icon-name {
+  color: #5a23f1;
 }
-
-.feature-content .feature-text {
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: 400;
-  color: #707070;
-}
-.feature-image > img {
-  height: 65px;
+.icon-div > img {
+  height: 5vw;
   padding: 1rem;
   margin: 1rem;
-
+  border: 2px dotted rgb(124, 123, 123);
   border-radius: 50%;
-  border: 2px dotted rgba(118, 74, 241, 0.5) !important;
 }
+.icon-name {
+  font-size: 1.8vw;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+.icon-pera {
+  color: rgb(110, 110, 110);
+  line-height: 20px;
+  font-size: 1.4vmax;
+}
+/* yaha per trusted section ki styling  end hoty he  */
 
-/* ==========================================================================
-                      About section styling
-============================================================================= */
-.about {
-  padding-top: 100px;
-  padding-bottom: 100px;
+/* yaha se about section ki styling shuru ho rahi he  */
+#about-section {
   background-color: #f8f9fa;
-  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 90px 0;
 }
-
-.about-images {
+.about-section-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.about-pic-div {
+  align-items: center;
+}
+#image1 {
+  background-image: url(./Assets/about-section/1.jpeg);
+  background-size: cover;
+  height: 450px;
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#image2 {
+  background-image: url(./Assets/about-section/2.jpeg);
+  background-size: cover;
   position: relative;
-}
-.about-images .about-img1 {
-  border-radius: 10px;
-}
-.about-images .about-img2 {
-  position: absolute;
-  right: 12px;
-  bottom: -22px;
-  border-radius: 10px;
-}
-.about-content {
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 50px;
+  width: 250px;
+  border-radius: 10px;
+  transform: translate(100px, 30px);
+}
+#playicon {
+  height: 90px;
+  border-radius: 50%;
+  width: 90px;
+  padding: 2rem;
+  background-color: white;
 }
 
-.about-content span {
-  font-size: 12px;
-  line-height: 12px;
+.about-content-div {
+  gap: 20px;
+  padding-left: 2rem;
+}
+.about-pera1 {
+  color: #764af1;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #f1f0f9;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+.about-heading {
+  font-size: 2rem;
+}
+.about-peragraph {
+  color: rgb(152, 151, 151);
+  line-height: 1.5rem;
+}
+.about-btn {
+  background-color: #764af1;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
   font-weight: 700;
-  color: #764af1 !important;
-  background-color: #764af10d !important;
+  padding: 8px 19px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
 }
-.about-content .title {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 39px;
-  color: #4d4d4d;
-  margin-bottom: 35px;
+.about-btn:hover {
+  background-color: #490fea;
 }
-.about-content .text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  color: #707070;
-}
+/* yaha per about section ki styling end hoty he  */
 
-/* ==========================================================================
-                  Cta section styling
-============================================================================= */
-.cta-section {
+#cta-section {
   position: relative;
-  background-position: 50% 50%;
-  background-size: 150%;
-  background-repeat: no-repeat;
-  background-image: url("./assets/images/bg/cta01.jpg");
+  height: 400px;
+  background-image: url(./Assets/cta-section/cta01.jpeg);
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
-.overlay {
-  background-color: rgba(22, 28, 45, 0.4);
+/* Subtle parallax simulation */
+#cta-section::before {
+  content: "";
   position: absolute;
-  inset: 0;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.669); /* Dark overlay */
   z-index: 1;
 }
 
-.cta {
+/* Text content */
+.cta-content {
+  position: relative;
+  z-index: 2; /* text overlay ke upar */
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#cta-heading {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+#cta-pera {
+  font-size: 1.2rem;
+  color: rgb(181, 179, 179);
+  margin-bottom: 2rem;
+}
+#cta-button {
+  outline: none;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+/* yaha per cta section k styling ka end ho raha he  */
+
+/* yaha se Why us k section  ki styling start ho rahi he  */
+.why-us-section {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 2rem;
+}
+.why-us {
+  text-transform: uppercase;
+  color: #764af1;
+  background-color: #f8f6fe;
+  padding: 3px 10px;
+  border-radius: 40px;
+  font-size: 15px;
+}
+.why-us-heading {
+  font-size: 32px;
+  font-weight: 500;
+}
+.why-us-pera {
+  font-size: 18px;
+  color: rgb(109, 106, 106);
+  text-align: center;
+  width: 70%;
+}
+.why-us-divs {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.why-us-div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 100px 0;
-  position: relative;
-  z-index: 2;
+  padding: 3vmin;
+  margin: 2rem;
+  border: 2px dotted rgb(228, 226, 226);
+  gap: 2vw;
+  transition: all 0.3s ease;
 }
-
-.cta-title {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 39px;
-  color: rgba(255, 255, 255, 1);
-  text-transform: capitalize;
-  margin-bottom: 30px;
+.div-icon {
+  height: 60px;
 }
-
-.cta-content .cta-text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.cta-content .btn-light {
-  font-size: 14px;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 7px 18px;
-  color: rgb(22, 28, 45);
-  box-shadow: rgba(118, 74, 241, 0.3) 0px 3px 5px 0px;
-  background: rgb(248, 249, 250);
-  border: 1px solid rgb(222, 226, 230);
-  border-radius: 7px;
-  outline: none;
+.why-us-div > a {
   text-decoration: none;
-  transition: 0.3s;
+  color: rgb(113, 112, 112);
+  transition: all 0.3s ease;
 }
+.why-us-div > a:hover {
+  color: #764af1;
+}
+.why-us-div:hover {
+  scale: 1.02;
+}
+.div-heading {
+  font-size: 3vmin;
+  font-weight: 600;
+}
+.div-pera {
+  font-size: 2.2vmin;
+  color: rgb(113, 112, 112);
+}
+/* yaha per why us k section ki styling ka end ho raha he  */
 
-.cta-content .btn-light:hover {
-  background-color: #dae0e5;
+/* yaha per testi section k section ki styling shuru ho rahi he  */
+#testi-section {
+  background-image: url(./Assets/testi-section/bg-testi.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: relative;
 }
-
-/* ==========================================================================
-                  Services section styling
-============================================================================= */
-.services {
-  background-color: #ffffff;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.services .section-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.services .badge {
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-  color: #764af1 !important;
-  background-color: #764af10d !important;
-}
-.services .title {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 39px;
-}
-.services .para-desc {
-  font-size: 16px;
-  line-height: 28px;
-  color: #707070;
-}
-
-.services-card {
-  border: 2px dashed rgba(204, 200, 200, 0.2);
-  transition: all 0.5s ease;
-}
-.services-card:hover {
-  border: 2px dashed rgba(118, 74, 241, 0.2);
-  transform: scale(1.02);
-}
-
-/* ==========================================================================
-                  Testmonial section styling
-============================================================================= */
-/* Testimonial Section */
-.testimonial {
-  position: relative; /* allows overlay to position absolutely */
-  padding: 100px 0;
-  overflow: hidden;
-  background-image: url("./assets/images/bg/bg-testi.jpg");
-  background-position: 50% 50%;
-  background-size: 150%;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* ensures overlay does not spill out */
-}
-
-.overlay2 {
-  background-color: rgba(22, 28, 45, 0.5);
+#testi-section::before {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* sits above background */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
-/* Testimonial Card Content */
-.testimonial-card {
-  width: 350px;
-  padding: 10px 30px;
+#testi-outer-div {
   position: relative;
-  z-index: 2; /* sits above overlay */
-  color: #fff; /* text stays visible over dark overlay */
-  text-align: center;
-}
-
-.testimonial-card > img {
-  margin: 25px 0 35px 0;
-  width: 25px;
-  height: 25px;
-}
-
-.testimonial-image > img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* avatar style */
-}
-
-.review .fa-solid {
-  font-size: 10px !important;
-}
-
-/* Background Image */
-
-.box {
-  position: absolute;
-  top: -2.5rem;
-  left: 47%;
-  width: 50px;
-  height: 50px;
-  background-color: #ffffff;
-  z-index: 2;
-  transform: rotate(45deg);
-}
-
-
-/* ==========================================================================
-                 Pricing section styling
-============================================================================= */
-.team{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #FFFFFF;
-}
-.team .badge {
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-  color: #764af1 !important;
-  background-color: #764af10d !important;
-}
-.team .title {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 39px;
-}
-.team .para-desc {
-  font-size: 16px;
-  line-height: 28px;
-  color: #707070;
-}
-.team-member .member-name a:hover {
-    color: #764af1 !important
-}
-
-.team-member .team-overlay {
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: all 0.5s ease;
-    transform: translateY(512px);
-    background: linear-gradient(to bottom, rgba(22,28,45,0.1) 10%, rgba(22,28,45,0.4) 50%, rgba(22,28,45,0.8) 75%, #161c2d 100%) !important
-}
-.team-member .team-overlay .team-info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: -1%;
-    left: 0;
-    opacity: 0;
-    transform: translateY(50%)
-}
-.team-member .team-overlay .team-icon {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    opacity: 0
-}
-
-@media (min-width: 1024px) and (max-width: 1140px) {
-    .team-member .team-overlay .team-icon {
-        top:-1% !important
-    }
-}
-
-.team-member.teams {
-    transition: all 0.5s ease
-}
-
-.team-member:hover {
-    background-color: #fff;
-    box-shadow: 0 0 3px rgba(22,28,45,0.15)
-}
-
-.team-member:hover .team-overlay {
-    opacity: 1;
-    transform: translateY(0)
-}
-
-.team-member:hover .team-info {
-    position: absolute;
-    opacity: 1;
-    transform: translateY(50%)
-}
-
-.team-member:hover .team-icon {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    opacity: 1
-}
-
-.team-member:hover.teams {
-    box-shadow: none !important
-}
-
-.social-icons li a {
-    color: #fff;
-    border: 1px solid rgba(118,74,241,0.4);
-    background-color: rgba(118,74,241,0.7);
-    display: inline-block;
-    height: 32px;
-    text-align: center;
-    font-size: 15px;
-    width: 32px;
-    line-height: 30px;
-    transition: all 0.4s ease;
-    border-radius: 50px;
-    overflow: hidden;
-    position: relative
-}
-
-.social-icons li a:hover {
-    background-color: #764af1;
-    border-color: #764af1;
-    color: #fff !important
-}
-
-.social-icons.social li a {
-    color: #adb5bd;
-    border-color: #adb5bd
-}
-
-.team-social li a {
-    color: #fff;
-    display: inline-block;
-    height: 36px;
-    text-align: center;
-    font-size: 22px;
-    width: 36px;
-    font-weight: 500 !important;
-    line-height: 30px;
-    transition: all 0.5s ease;
-    overflow: hidden;
-    position: relative
-}
-
-.team-social li a:hover {
-    color: #161c2d !important
-}
-
-.team img,.team .team-social {
-    transition: all 0.5s ease
-}
-
-.team-primary .member-name a {
-    transition: all 0.5s ease
-}
-
-.team-primary .member-name a:hover {
-    color: #764af1 !important
-}
-
-.team-primary .card-img .card-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    background: linear-gradient(to bottom, rgba(22,28,45,0.1) 10%, rgba(22,28,45,0.4) 50%, rgba(22,28,45,0.8) 75%, #161c2d 100%) !important;
-    transition: all 0.5s ease
-}
-
-.team-primary .social-icons {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: -50px;
-    opacity: 0;
-    transition: all 0.5s ease
-}
-
-.team-primary:hover .card-img .card-overlay {
-    opacity: 1
-}
-
-.team-primary:hover .social-icons {
-    bottom: 15px;
-    opacity: 1
-}
-
-
-
-
-
-/* ==========================================================================
-                 Footer section styling
-============================================================================= */
-footer {
-  background-color: hsl(224, 34%, 13%);
-}
-
-footer > .footer-top {
-  padding: 3.5em 7.25em;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 6.7em;
-}
-
-.footer-top > .footer-about {
-  flex: 1;
-}
-
-.footer-about > .footer-about-text {
-  color: hsla(0, 0%, 100%, 0.5);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 28px;
-  margin-block: 1.2em;
-}
-
-.footer-top > .footer-about > .footer-socials {
-  display: flex;
-  align-items: center;
-  gap: 0.6em;
-}
-
-.footer-socials > a {
-  width: 32px;
-  height: 32px;
+  z-index: 1;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid hsl(226, 34%, 22%);
-  border-radius: 0.375em;
-  background-color: hsl(226, 34%, 22%, 0.35);
-  transition: 0.4s ease-out;
+}
+.testi-div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: white;
+  animation: slideShow 8s infinite;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
 }
 
-.footer-socials > a:hover {
-  background-color: hsl(256, 86%, 62%);
+/* animation delays for each slide */
+.testi-div:nth-child(1) {
+  animation-delay: 0s;
 }
-/* 
-.footer-top > .footer-top-item {
-  flex: 1;
-  border: 1px solid white;
-} */
-
-.footer-top-item > h3 {
-  color: rgb(248, 249, 250);
-  font-size: 1.625rem;
-  font-weight: 400;
-  line-height: 36px;
-  margin-bottom: 1em;
+.testi-div:nth-child(2) {
+  animation-delay: 2s;
+}
+.testi-div:nth-child(3) {
+  animation-delay: 4s;
+}
+.testi-div:nth-child(4) {
+  animation-delay: 6s;
 }
 
-.footer-top > .company-links > ul, .footer-top > .useful-links > ul {
-  list-style-type: none;
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.company-links a, .useful-links a {
-  text-decoration: none;
+.testi-pera1 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.testi-pic {
+  height: 90px;
+  border-radius: 50%;
+}
+h3 {
+  font-size: 18px;
+  color: #111;
+  margin-top: 10px;
+}
+
+.testi-pera2 {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.star-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.star-img {
+  width: 20px;
+  height: 20px;
+}
+
+/* yaha per testi section k section ki styling ka end ho raha he  */
+
+/* yaha se deals wale section ki styling shuru ho rahi he jo k section ki styling uper jesi hi he tho mene usi ka class de diya he is section ko b jo styling change he wo yaha per he  */
+
+.deals-div {
+  width: 98%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3vmin;
+  margin: 60px 0;
+}
+.deal {
+  height: 550px;
+  width: 23%;
+  border: 1px solid rgb(212, 208, 208);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#third-deal {
+  height: 650px;
+  transform: translatey(-50px);
+  border-top: none;
+}
+#third-deal > .deal-start-div {
+  background-color: #764af1;
+}
+.blue-arrow {
+  height: 25px;
+}
+.deal-start-div {
+  text-align: center;
+  width: 100%;
+  background-color: #161c2d;
+  padding: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.deal-start-div > h3 {
+  color: white;
+  font-size: 3.5vmin;
+  margin: 20px 0;
+}
+.deal-start-div > p {
+  color: rgb(160, 157, 157);
+}
+.deals-charges-div {
+  background-color: #f8f9fa;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  border-bottom: 1px solid rgb(212, 208, 208);
+}
+.deals-advantages {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.deals-advantages > p > img {
+  height: 20px;
+}
+.deals-advantages > p {
+  display: flex;
+  column-gap: 10px;
+  color: rgb(74, 73, 73);
+}
+.deals-btn {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid rgb(212, 208, 208);
+}
+.deals-btn > button {
+  border: none;
+  background-color: #161c2d;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  width: 160px;
+  border-radius: 10px;
+}
+.blue-btn > button {
+  background-color: #764af1;
+}
+
+/* yaha per deals section k styling ka end ho raha he  */
+
+/* yaha se member section ki styling shuru ho rahi he jo k section ki styling pirse change he tho wohi class de diii he  */
+.member-div {
   display: flex;
   align-items: center;
-  gap: 0.5em;
-  margin-bottom: 0.7em;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-
-.company-links a > span, .useful-links a > span {
-  color: rgb(173, 181, 189);
-  font-size: 0.9375rem;
-  font-weight: 400;
-  line-height: 23px;
-  transition: 0.5s;
+.team {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 10px;
 }
-
-.company-links a:hover > span, .useful-links a:hover > span {
-  color: hsl(256, 86%, 62%);
+.team:hover .member-contant {
+  transform: translateY(0);
 }
-
-.company-links a > img, .useful-links a > img {
-  transition: 0.5s;
-}
-
-.company-links a:hover > img, .useful-links a:hover > img {
-  translate: 3px 0;
-}
-
-.footer-top > .bizcell-store > address > .address-item {
+.member-contant {
+  transform: translateY(100%);
+  height: 100%;
+  width: 100%;
+  background-color: #1109256d;
   display: flex;
+  flex-direction: column;
+  justify-content: end;
   align-items: center;
-  gap: 0.75em;
-  margin-bottom: 0.75em;
+  gap: 10px;
+  padding-bottom: 30px;
+  transition: all 0.3s ease;
+}
+.member-contant > h2 {
+  color: white;
+}
+.member-contant > p {
+  color: white;
+}
+.member1 {
+  background-image: url(./Assets/what-special/1.jpeg);
+  background-size: cover;
+}
+.member2 {
+  background-image: url(./Assets/what-special/2.jpeg);
+  background-size: cover;
+}
+.member3 {
+  background-image: url(./Assets/what-special/3.jpeg);
+  background-size: cover;
+}
+.member4 {
+  background-image: url(./Assets/what-special/4.jpeg);
+  background-size: cover;
 }
 
-.address-item:nth-child(4) > img, .address-item:nth-child(5) > img {
-  margin-top: 0.25em;
+.team-icons {
+  height: 40px;
+  width: 40px;
+  background-color: #764af1;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.team-icons:hover {
+  background-color: #4923af;
 }
 
+/* yaha per member section ki styling end hoty he  */
 
-.address-item > p {
-  color: rgb(173, 181, 189);
-  font-style: normal;
+/* yaha se agle section some news ki styling shuru ho rahi he jo k section ki styling same tho wohi class de diii he why us section waliii  */
+
+.news-outer-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vmin;
 }
-
-footer > .footer-bottom {
-  border-top: 1px solid hsl(226, 34%, 22%);
-  padding: 30px 7.25em;
+.news {
+  width: 350px;
+  border-radius: 20px;
+  border: 1px solid rgb(141, 139, 139);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+.news-img {
+  height: 200px;
+  width: 95%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.news-img-overlay {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  background-color: #13063755;
+  display: none;
+  transition: all 0.3s ease;
 }
-
-.footer-bottom > p {
+.news-img-overlay > button {
+  border: none;
   display: flex;
   align-items: center;
-  gap: 0.4em;
+  font-weight: 600;
+  padding: 10px;
+  gap: 3px;
+  background-color: #764af1;
+  color: white;
 }
-
-.footer-bottom > p > span {
-  color: hsl(210, 11%, 71%);
+.news-img-overlay > button > img {
+  height: 16px;
 }
-
-.footer-bottom > .visa-cards {
+.news-img-overlay > a {
+  text-decoration: none;
+  color: rgb(239, 237, 237);
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.news-img-overlay > a:hover {
+  color: #5118ef;
+}
+.img1 {
+  background-image: url(./Assets/some-news/1.jpeg);
+}
+.img2 {
+  background-image: url(./Assets/some-news/2.jpeg);
+}
+.img3 {
+  background-image: url(./Assets/some-news/3.jpeg);
+}
+.news:hover .news-img-overlay {
   display: flex;
+}
+.news:hover .news-img {
+  scale: 1.1;
+}
+.img-content > h3 {
+  font-size: 3vmin;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.img-content > p {
+  font-size: 2vmin;
+  color: rgb(91, 90, 90);
+}
+
+.likes-div {
+  border-top: 1px solid rgb(141, 139, 139);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.6em;
+}
+.likes-div > span {
+  display: flex;
+  gap: 4px;
+}
+.comment-likes {
+  height: 20px;
+}
+/* yaha per hamare some news section ki styling end hoty he  */
+#companies-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background: #f8f8f8;
+}
+.companies-inner-div {
+  width: 60%;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+}
+.companies-inner-div > img {
+  animation: moveLogos 10s linear infinite;
+}
+@keyframes moveLogos {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  95% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* yaha per hamara companies k section ki styling end ho raha he  */
+
+/* yaha se hamare footer section ki styling start ho rahi he  */
+footer {
+  background-color: #161c2d;
+  position: relative;
+}
+.footer-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 20%;
+  padding: 0.6rem;
+  border: 1px solid #414e70;
+  transition: all 0.3s ease-out;
+}
+.footer-icon:hover {
+  background-color: #764af1;
+}
+
+.footer-div {
+  padding-top: 4rem;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#footer-logo-div{
+  width: 20%;
+}
+#links-footer {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+#footer-logo-div > p {
+  color: rgb(184, 180, 180);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links > p {
+  color: white;
+  font-size: 1.5rem;
+}
+.footer-links > a {
+  text-decoration: none;
+  color: rgb(170, 166, 166);
+  padding: 5px;
+  transition: all 0.3s ease-out;
+}
+#right-icon {
+  height: 14px;
+}
+.footer-links > a:hover {
+  color: #764af1;
+}
+.footer-address {
+  display: flex;
+  flex-direction: column;
+}
+.footer-address > p {
+  color: rgb(182, 177, 177);
+  padding: 5px;
+}
+.footer-address > p#heading {
+  font-size: 1.5rem;
+  color: white;
+}
+.address-icons {
+  height: 15px;
+  padding-right: 5px;
+}
+
+.copy-right-div {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgb(157, 155, 155);
+}
+.copy-right-div > p {
+  color: white;
+}
+/* yaha per hamare footer section k styling ka end ho raha he  */
+
+/* =========================================== Media quarries ===========================================  */
+@media (max-width: 1200px) {
+  .team {
+    width: 220px;
+  }
+  .news {
+    width: 300px;
+  }
+}
+@media (max-width: 992px) {
+  /* ====================== header section ======================  */
+  .navbar {
+    justify-content: space-between;
+  }
+  #logo {
+    margin-left: 30px;
+  }
+  .links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-right: 30px;
+  }
+
+  /* ====================== Home section ======================  */
+  .home-content {
+    width: 50%;
+  }
+  .home-content > h1 {
+    font-size: 6vmin;
+  }
+  .home-content > p {
+    font-size: 2vmin;
+  }
+  /* ====================== Trusted section ======================  */
+  .partners {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .partners-div {
+    width: 40%;
+    gap: 20px;
+  }
+  .icon-div > img {
+    height: 8vw;
+  }
+  .icon-name {
+    font-size: 2.5vw;
+  }
+  .icon-pera {
+    font-size: 1.6vw;
+  }
+
+  /* ====================== About section ======================  */
+  #about-section {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .about-section-div {
+    width: 90%;
+  }
+  /* ====================== Why us section ======================  */
+  .why-us-div {
+    width: 40%;
+  }
+  /* ====================== Testi section ======================  */
+  #testi-outer-div {
+    width: 400px;
+  }
+
+  /* ====================== Deals section ======================  */
+  .deals-div {
+    width: 100%;
+    gap: 60px;
+  }
+  .deal {
+    width: 40%;
+  }
+  /* ====================== Team section ======================  */
+  .team {
+    width: 350px;
+    height: 350px;
+  }
+
+  /* ====================== News section ======================  */
+  .news {
+    width: 350px;
+  }
+
+  /* ====================== Footer ======================  */
+  .footer-div {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  #footer-logo-div {
+    width: 90%;
+  }
+  #links-footer {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ====================== Home section ======================  */
+  .home-content {
+    width: 70%;
+  }
+
+  /* ====================== Trusted section ======================  */
+  .partners-div {
+    width: 90%;
+  }
+  .icon-div > img {
+    height: 11vw;
+  }
+  .icon-name {
+    font-size: 3.5vmax;
+  }
+  .icon-pera {
+    font-size: 2.5vmax;
+  }
+  /* ====================== Why us section ======================  */
+  .why-us-div {
+    width: 70%;
+  }
+  /* ====================== Testi section ======================  */
+  #testi-outer-div {
+    width: 500px;
+  }
+
+  /* ====================== Deals section ======================  */
+  .deal {
+    width: 80%;
+  }
+  /* ====================== Team section ======================  */
+  .team {
+    width: 500px;
+    height: 400px;
+  }
+  /* ====================== News section ======================  */
+  .news {
+    width: 500px;
+  }
+  /* ====================== Footer ======================  */
+  #links-footer {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .copy-right-div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  /* ====================== header section ======================  */
+  #logo {
+    margin: 0;
+  }
+  .menu-icon {
+    margin: 0;
+  }
+
+  /* ====================== Home section ======================  */
+  .home-content {
+    width: 80%;
+  }
+  .home-content > h1 {
+    font-size: 4vmax;
+  }
+  .home-content > p {
+    font-size: 2vmax;
+  }
+
+  /* ====================== Trusted section ======================  */
+  .partners-div {
+    width: 90%;
+  }
+  .icon-div > img {
+    height: 11vmax;
+  }
+  .icon-name {
+    font-size: 3vmax;
+  }
+  .icon-pera {
+    font-size: 2vmax;
+  }
+
+  /* ====================== About section ======================  */
+  #image1 {
+    height: 80vw;
+    width: 65vw;
+  }
+  #image2 {
+    height: 45vw;
+    width: 45vw;
+    transform: translate(18vw, 30px);
+  }
+  #playicon {
+    height: 15vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #playicon > img {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  }
+
+  .about-pera1 {
+    font-size: 14px;
+  }
+  .about-peragraph {
+    font-size: 15px;
+  }
+
+  /* ====================== Why us section ======================  */
+  .why-us-div {
+    width: 90%;
+  }
+  .div-heading {
+    font-size: 4.3vw;
+  }
+  .div-pera {
+    font-size: 3vw;
+  }
+
+  /* ====================== Testi section ======================  */
+  #testi-outer-div {
+    width: 90%;
+  }
+
+  /* ====================== Deals section ======================  */
+  .deal {
+    width: 90%;
+  }
+  /* ====================== Team section ======================  */
+  .team {
+    width: 90%;
+    height: 100vw;
+  }
+  /* ====================== News section ======================  */
+  .news {
+    width: 90%;
+  }
+  .img-content > h3 {
+    font-size: 23px;
+  }
+  .img-content > p {
+    font-size: 16px;
+  }
+  /* ====================== Companies section ======================  */
+  .companies-inner-div {
+    width: 90%;
+  }
 }
